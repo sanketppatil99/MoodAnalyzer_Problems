@@ -13,14 +13,22 @@ namespace MoodAnalyzerProblem
         {
             this.message = message;
         }
-        public string AnalyzerMood(string message)
+
+        public string AnalyzerMood()
         {
-            if (message.ToLower().Contains("sad"))
-                return "Sad";
-            else
-            return "Happy";
+            try
+            {
+                if (this.message.ToLower().Contains("sad"))
+                    return "Sad";
+                else
+                return "Happy";
+            }
+            catch (Exception ex)
+            {
+                return "Happy";
+            }
         }
 
-        
+
     }
 }
